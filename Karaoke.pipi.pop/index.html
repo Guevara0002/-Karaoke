@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karaoke de Pip y Pop</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <main class="page">
+
+    <!-- Invitación -->
+    <header class="invite">
+      <img class="invite__img" src="../img/pip-y-pop.jpg" alt="Pip y Pop, dos nutrias moradas abrazadas, saludando">
+      <div class="invite__body">
+        <h1>Pip y Pop te invitan a su karaoke</h1>
+        <p class="invite__lead">Una noche para cantar, reír y aplaudir. Inscribe tu canción y mira en qué turno te toca.</p>
+        <!-- Edita aquí los datos de la fiesta -->
+        <dl class="details">
+          <div><dt>📅 Fecha</dt><dd>Sábado 14 de noviembre</dd></div>
+          <div><dt>🕖 Hora</dt><dd>7:00 p. m.</dd></div>
+          <div><dt>📍 Lugar</dt><dd>Casa de Pip y Pop</dd></div>
+        </dl>
+        <a class="btn btn--primary" href="#inscribirse">Inscribir mi canción</a>
+      </div>
+    </header>
+
+    <!-- Formulario para agregar canciones -->
+    <section class="card" id="inscribirse">
+      <h2>Inscribe tu canción</h2>
+      <form id="song_form" class="form" novalidate>
+        <label class="field">
+          <span>Tu nombre</span>
+          <input id="singer_name" name="singer_name" type="text" maxlength="50" autocomplete="given-name" placeholder="Ej. Ana" required>
+        </label>
+        <label class="field">
+          <span>Nombre de la canción</span>
+          <input id="song_name" name="song_name" type="text" maxlength="80" placeholder="Ej. Bohemian Rhapsody" required>
+        </label>
+        <label class="field">
+          <span>Nombre del artista</span>
+          <input id="artist_name" name="artist_name" type="text" maxlength="80" placeholder="Ej. Queen" required>
+        </label>
+        <label class="field">
+          <span>Enlace de la canción</span>
+          <input id="url_song" name="url_song" type="url" placeholder="https://www.youtube.com/watch?v=..." required>
+          <small>Con un enlace de YouTube verás la miniatura del video.</small>
+        </label>
+        <button class="btn btn--primary" type="submit">Agregar a la lista</button>
+      </form>
+    </section>
+
+    <!-- Lista de turnos -->
+    <section class="card" aria-labelledby="list_title">
+      <div class="card__head">
+        <h2 id="list_title">Turnos de la noche</h2>
+        <span id="song_count" class="count" aria-live="polite"></span>
+      </div>
+      <ol id="play_list" class="songs"></ol>
+      <p id="empty_msg" class="empty">Aún no hay canciones. ¡Sé la primera persona en cantar!</p>
+    </section>
+
+  </main>
+  <script src="main.js" defer></script>
+</body>
+</html>
