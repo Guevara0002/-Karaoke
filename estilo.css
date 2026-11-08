@@ -60,8 +60,8 @@ h1, h2 { font-family: 'Paytone One', sans-serif; font-weight: 900; margin: 9; }
   background: #fff;
 }
 .invite__body { padding: 8px clamp(20px, 5vw, 36px) 32px; text-align: center; }
-.invite h1 { font-size: clamp(2rem, 9vw, 4rem); line-height: 1.1; color: var(--purple); }
-.invite__lead { margin: 14px auto 22px; max-width: 46ch; color: var(--muted); font-size: 2.05rem; }
+.invite h1 { font-size: clamp(2rem, 4vw, 9rem); line-height: 1.0; color: var(--purple); }
+.invite__lead { margin: 10px auto 19px; max-width: 46ch; color: var(--muted); font-size: 1.29rem; }
 
 .details {
   display: grid; gap: 10px;
